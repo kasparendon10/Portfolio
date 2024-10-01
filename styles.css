@@ -1,0 +1,445 @@
+/* Reset básico y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header y navegación */
+header {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Sección Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 50px 100px;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    transition: background 0.3s;
+    flex-wrap: wrap;
+}
+
+.hero img {
+    border-radius: 50%;
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.hero-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    margin-bottom: 30px;
+}
+
+.hero button, .hero-buttons a {
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.hero button:hover, .hero-buttons a:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Technology slider */
+.tech-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    border-radius: 10px;
+    margin-top: 30px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;  /* Para Firefox */
+    -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+}
+
+.tech-slider::-webkit-scrollbar {
+    display: none;  /* Para Chrome, Safari y Opera */
+}
+
+.tech-item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    white-space: nowrap;
+}
+
+.tech-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.tech-item p {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+/* Secciones generales */
+section {
+    padding: 80px 50px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+/* Estilos para la sección de proyectos */
+.proyecto-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s;
+    flex-wrap: wrap;
+}
+
+.proyecto-item:hover {
+    transform: translateY(-5px);
+}
+
+.proyecto-img {
+    max-width: 250px;
+    width: 100%;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+.proyecto-img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen cuando se hace hover */
+}
+
+.proyecto-info {
+    flex: 1;
+    min-width: 250px;
+}
+#proyectos h2 {
+    color: black;
+}
+.proyecto-info h3 {
+    font-size: 1.4em;
+    color: #3498db;
+}
+
+.proyecto-info span {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.proyecto-info p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.proyecto-info a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.proyecto-info a:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+footer nav ul {
+    list-style: none;
+}
+
+footer nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+body.dark-mode header {
+    background-color: #34495e;
+}
+
+body.dark-mode section {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+body.dark-mode .proyecto-item {
+    background-color: #2c3e50;
+}
+
+body.dark-mode .proyecto-info h3 {
+    color: #3498db;
+}
+
+body.dark-mode .proyecto-info span {
+    color: #bdc3c7;
+}
+
+body.dark-mode .proyecto-info p {
+    color: #ecf0f1;
+}
+
+body.dark-mode footer {
+    background-color: #2c3e50;
+}
+
+/* Estilo de la sección 'Sobre mí' con formulario */
+.sobre-mi-content {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sobre-mi-text {
+    color: black;
+    flex: 0.5;
+    margin-right: 35px;
+    min-width: 300px;
+}
+#sobre-mi h2{
+    color: black;
+}
+
+.formulario-contacto {
+    color: black;
+    flex: 1;
+    max-width: 400px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h3 {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.formulario-contacto label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario-contacto button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 20px 50px;
+    }
+
+    .hero img {
+        margin-right: 0;
+        max-width: 200px;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons a {
+        margin: 10px 0;
+        width: 200px;
+    }
+
+    .tech-slider {
+        padding: 25px 0;
+    }
+
+    .tech-item {
+        padding: 0 10px;
+    }
+
+    .tech-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .tech-item p {
+        font-size: 0.7em;
+    }
+
+    .proyecto-item {
+        flex-direction: column;
+        overflow: hidden; /* Asegura que la imagen no se recorte */
+    }
+    
+    .proyecto-img {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+        transition: transform 0.3s ease; /* Transición suave */
+    }
+    
+    .proyecto-img:hover {
+        transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    }
+    
+    
+
+    .sobre-mi-content {
+        flex-direction: column;
+    }
+
+    .sobre-mi-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .formulario-contacto {
+        max-width: 100%;
+        color:black;
+    }
+}

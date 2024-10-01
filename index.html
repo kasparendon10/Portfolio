@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Portafolio web de Carlos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li>
+          <button id="darkModeToggle" aria-label="Alternar modo oscuro">
+            <span class="material-symbols-outlined">contrast</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <img src="img/perfil1.jpeg" alt="Foto de Carlos Mario Rendón">
+    <div class="hero-content">
+      <h1>¡Hola, soy Carlos Mario Rendón!</h1>
+      <p>Soy un Desarrollador Web Full-Stack apasionado de la tecnología y un entusiasta de los nuevos proyectos...</p>
+      <div class="hero-buttons">
+        <a href="https://www.linkedin.com/in/carlos-mario-rendon-7601ab1a8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="ruta/del/archivo/CV.pdf" download="Carlos_Rendon_CV.pdf">Descargar CV</a>
+      </div>
+      <div class="tech-slider">
+        <div class="tech-item"><img src="img/html.png" alt="HTML"><p>HTML</p></div>
+        <div class="tech-item"><img src="img/css.png" alt="CSS"><p>CSS</p></div>
+        <div class="tech-item"><img src="img/js.png" alt="JavaScript"><p>JavaScript</p></div>
+        <div class="tech-item"><img src="img/react.png" alt="React"><p>React</p></div>
+        <div class="tech-item"><img src="img/nodejs.png" alt="Node.js"><p>Node.js</p></div>
+        <div class="tech-item"><img src="img/postgres.png" alt="PostgreSQL"><p>PostgreSQL</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="proyecto-item">
+      <img src="img/pokeapi.jpeg" alt="Imagen del Proyecto" class="proyecto-img">
+      <div class="proyecto-info">
+        <h3>PokeApi</h3>
+        <span>Tecnologías: HTML, CSS, React.js, axios</span>
+        <p> Aplicación web desarrollada con React, HTML, CSS, y Axios para consumir la PokeAPI. La aplicación permite consultar y mostrar información de diferentes Pokémon en tiempo real. Se utilizó Axios para manejar las solicitudes HTTP a la API, y React para estructurar y renderizar dinámicamente los datos obtenidos. Además, se diseñó una interfaz responsiva y visualmente atractiva mediante CSS. El proyecto incluye maquetación optimizada y componentes reutilizables para mejorar la organización del código.</p>
+        <a href="https://github.com/kasparendon10/entregable--react.git" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+        <a href="https://astounding-paprenjak-a170ab.netlify.app" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+      </div>
+    </div>
+    <div class="proyecto-item">
+      <img src="galletasdelafortuna.jpeg" alt="Imagen del Proyecto" class="proyecto-img">
+      <div class="proyecto-info">
+        <h3>Galletas de la Fortuna</h3>
+        <span>Tecnologías: HTML, CSS, React.js, axios</span>
+        <p>Desarrollada utilizando React, HTML, CSS, y Axios, logrando un producto dinámico y eficiente. Se empleó Axios para realizar solicitudes HTTP, permitiendo una conectividad rápida y fluida con servicios externos. Gracias a React, los datos obtenidos se estructuran y renderizan de manera dinámica, lo que facilita una experiencia interactiva y en tiempo real.
+          Además, se prestó especial atención al diseño visual y la responsividad, creando una interfaz atractiva y adaptable mediante un maquetado optimizado en CSS. El proyecto también destaca por el uso de componentes reutilizables
+        </p>
+        <a href="https://github.com/kasparendon10/entregable--react.git" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+        <a href="https://strong-licorice-edfc22.netlify.app" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+      </div>
+    </div>
+    <div class="proyecto-item">
+      <img src="img/rickandmorty.jpeg" alt="Imagen del Proyecto" class="proyecto-img">
+      <div class="proyecto-info">
+        <h3>Rick and Morty</h3>
+        <span>Tecnologías: HTML, CSS, React.js, axios</span>
+        <p>La aplicación web de personajes de Rick and Morty fue desarrollada utilizando React, HTML, CSS, y Axios para consumir la API oficial de la serie. Se utilizó Axios para realizar solicitudes HTTP, permitiendo obtener y mostrar en tiempo real la información de los personajes.cuenta con una interfaz visualmente atractiva y responsiva, lograda mediante un maquetado en CSS que asegura que la aplicación se vea bien en distintos dispositivos. Asimismo, se implementaron componentes reutilizables para mejorar la organización y facilitar el mantenimiento del código.
+        </p>
+        <a href="https://github.com/kasparendon10/entregable-3-academlo.git" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+        <a href="https://leafy-truffle-7da46d.netlify.app/" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+      </div>
+    </div>
+    <div class="proyecto-item">
+      <img src="img/bookSearch.jpeg" alt="Imagen del Proyecto" class="proyecto-img">
+      <div class="proyecto-info">
+        <h3>Buscador de Libros en Internet</h3>
+        <span>Tecnologías: HTML, CSS, JavaScript</span>
+        <p>Buscador de Libros en Internet fue desarrollado utilizando HTML, CSS, y JavaScript, aprovechando APIs públicas de plataformas conocidas para realizar las búsquedas de libros. La aplicación permite a los usuarios filtrar los resultados según diferentes criterios, mejorando la experiencia de búsqueda.
+          El diseño en CSS proporciona una estructura clara y amigable para el usuario, mientras que la lógica de filtrado y la obtención de datos se desarrollaron con JavaScript, lo que garantiza una interacción fluida y en tiempo real con las APIs.
+        </p>
+        <a href="https://github.com/kasparendon10/Book-Search-Engine.git" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+        <a href="https://lovely-medovik-6d3764.netlify.app" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <div class="sobre-mi-content">
+      <div class="sobre-mi-text">
+        <p>Soy un apasionado desarrollador web con experiencia en JavaScript, React, HTML, CSS, y Node.js.
+           Me encanta aprender nuevas tecnologías y aplicar soluciones creativas a problemas complejos. He trabajado en proyectos que incluyen aplicaciones web interactivas.
+           Entre mis habilidades destacan:
+
+          <p> Desarrollo Frontend: React, JavaScript (ES6+), HTML5, CSS3.</p> 
+          <p>Consumo de APIs: Axios para manejar solicitudes HTTP y conectividad eficiente con servicios externos.</p>
+           <p>Maquetación y Diseño: Creación de interfaces responsivas y optimizadas para brindar una excelente experiencia de usuario.</p>
+           <p>Versionamiento de Código: Uso de Git para control de versiones y contribuciones a proyectos colaborativos.
+           Resolución de Problemas: Capacidad para encontrar soluciones rápidas y eficaces, utilizando buenas prácticas de desarrollo.</p>
+           Soy responsable, autodidacta y estoy en constante búsqueda de nuevos desafíos para crecer profesionalmente. Estoy disponible para colaborar en proyectos que requieran innovación tecnológica y soluciones de calidad.</p>
+      </div>
+      <div class="formulario-contacto">
+        <h3>Contáctame</h3>
+        <form action="#" method="post">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Todos los Derechos Reservados</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
