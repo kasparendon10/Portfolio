@@ -1,4 +1,4 @@
-/* Reset básico y estilos generales */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,40 +12,91 @@ body {
     color: #333;
     transition: background-color 0.3s, color 0.3s;
 }
-
 /* Header y navegación */
 header {
-    background-color: #2c3e50;
+    background-color: #004e64;
     padding: 15px 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
-}
-
-header nav ul {
+  }
+  
+  header ul {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-header nav ul li {
+  }
+  
+  header ul li {
     margin: 0 15px;
-}
-
-header nav ul li a {
+  }
+  
+  header ul li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
+  }
+  
+  header ul li a:hover {
     color: #3498db;
-}
+  }
+  
+  header button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+  
+  /* Estilos para versión móvil */
+  .menu-toggle {
+    display: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  
+  /* Ocultar el menú en dispositivos móviles */
+  .nav-list {
+    display: flex;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      background-color: #004e64;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-list.show {
+      display: flex;
+    }
+  
+    header ul li {
+      margin: 15px 0;
+    }
+  }
+  
 
 /* Sección Hero */
 .hero {
@@ -120,12 +171,12 @@ header nav ul li a:hover {
     border-radius: 10px;
     margin-top: 30px;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;  /* Para Firefox */
-    -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
 
 .tech-slider::-webkit-scrollbar {
-    display: none;  /* Para Chrome, Safari y Opera */
+    display: none;
 }
 
 .tech-item {
@@ -189,7 +240,7 @@ section h2 {
     transition: transform 0.3s ease;
 }
 .proyecto-img:hover {
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen cuando se hace hover */
+    transform: scale(1.1);
 }
 
 .proyecto-info {
@@ -233,32 +284,27 @@ section h2 {
     background-color: #2980b9;
 }
 
-/* Footer */
 footer {
-    background-color: #2c3e50;
+    background-color: #004e64;
     color: white;
-    padding: 30px 0;
+    padding: 2em 0;
     text-align: center;
-    transition: background-color 0.3s;
+    margin-top: auto;
 }
 
-footer nav ul {
-    list-style: none;
+footer nav {
+    margin-bottom: 1em;
 }
 
-footer nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-footer nav ul li a {
+footer nav a {
     color: white;
+    margin: 0 10px;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-footer nav ul li a:hover {
-    color: #3498db;
+.social-media a img {
+    width: 30px;
+    margin: 0 10px;
 }
 
 /* Estilos para el modo oscuro */
@@ -294,68 +340,6 @@ body.dark-mode .proyecto-info p {
 
 body.dark-mode footer {
     background-color: #2c3e50;
-}
-
-/* Estilo de la sección 'Sobre mí' con formulario */
-.sobre-mi-content {
-    color: black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.sobre-mi-text {
-    color: black;
-    flex: 0.5;
-    margin-right: 35px;
-    min-width: 300px;
-}
-#sobre-mi h2{
-    color: black;
-}
-
-.formulario-contacto {
-    color: black;
-    flex: 1;
-    max-width: 400px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.formulario-contacto h3 {
-    color: black;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-}
-
-.formulario-contacto label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.formulario-contacto input,
-.formulario-contacto textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.formulario-contacto button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.formulario-contacto button:hover {
-    background-color: #2980b9;
 }
 
 /* Responsive */
@@ -413,18 +397,18 @@ body.dark-mode footer {
 
     .proyecto-item {
         flex-direction: column;
-        overflow: hidden; /* Asegura que la imagen no se recorte */
+        overflow: hidden; 
     }
     
     .proyecto-img {
         margin-right: 0;
         margin-bottom: 20px;
         max-width: 100%;
-        transition: transform 0.3s ease; /* Transición suave */
+        transition: transform 0.3s ease; 
     }
     
     .proyecto-img:hover {
-        transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+        transform: scale(1.1); 
     }
     
     
@@ -442,4 +426,33 @@ body.dark-mode footer {
         max-width: 100%;
         color:black;
     }
+}
+/* Botón "Volver arriba" */
+.back-to-top {
+    position: fixed;
+    bottom: 120px; 
+    right: 20px;
+    background-color:orange;
+    color: var(--light-text);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    z-index: 1001;
+}
+
+.back-to-top:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.back-to-top i {
+    margin: 0;
 }

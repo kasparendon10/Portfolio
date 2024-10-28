@@ -1,0 +1,222 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #004d66;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    height: auto; 
+}
+
+header nav {
+    position: relative;
+}
+
+header nav h1 {
+    color: white; 
+    margin-bottom: 0; 
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Ajuste para el ícono del menú hamburguesa */
+.menu-icon {
+    display: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
+    z-index: 10; 
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        height: 4em; 
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #004d66;
+        position: absolute;
+        top: 100%; 
+        right: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 5;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+}
+
+.project-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.project-card h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+}
+
+.project-card p {
+    margin: 0.5em 0;
+}
+
+.project-card .tags {
+    margin-top: 1em;
+}
+
+.project-card .tags span {
+    background-color: #e1f5fe;
+    color: #0277bd;
+    padding: 0.3em 0.5em;
+    border-radius: 4px;
+    margin-right: 0.5em;
+}
+
+.project-card:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.project-card .buttons {
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+.project-card .btn-github, .project-card .btn-view-project {
+    display: inline-block;
+    padding: 0.6em 1em;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .btn-github {
+    background-color: #333;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card .btn-github:hover {
+    background-color: #555;
+}
+
+.project-card .btn-view-project {
+    background-color: #0277bd;
+    color: white;
+}
+
+.project-card .btn-view-project:hover {
+    background-color: #01579b;
+}
+
+
+footer {
+    background-color: #004d66;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+footer .social {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+footer .social li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+/* Botón "Volver arriba" */
+.back-to-top {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    background-color:orange;
+    color: var(--light-text);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    z-index: 1001;
+}
+
+.back-to-top:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.back-to-top i {
+    margin: 0;
+}

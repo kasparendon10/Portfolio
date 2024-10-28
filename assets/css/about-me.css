@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* Estilos header */
+header {
+    background-color: #004e64;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    color: white;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header ul li {
+    margin: 0 10px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Estilos para versión móvil */
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar el ícono de hamburguesa en pantallas pequeñas */
+    }
+
+    .nav-list {
+        display: none; /* Ocultar el menú inicialmente en móviles */
+        flex-direction: column;
+        background-color: #004e64;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    header ul li {
+        margin: 15px 0;
+    }
+}
+
+
+.about-me {
+    text-align: center;
+    margin: 3em 0;
+}
+
+.profile-photo img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.about-me h2 {
+    font-size: 2em;
+    margin: 0.5em 0;
+}
+
+.about-me p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.about-me button {
+    background-color: #008c9e;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+}
+.about-me button a{
+    text-decoration:none;
+}
+
+.about-me button:hover {
+    background-color: #006c7a;
+}
+
+.skills, .studies {
+    text-align: center;
+    margin: 3em 0;
+}
+
+.skills-icons img, .studies img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+footer {
+    background-color: #004e64;
+    color: white;
+    padding: 2em 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer nav {
+    margin-bottom: 1em;
+}
+
+footer nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-media a img {
+    width: 30px;
+    margin: 0 10px;
+}
+.studies img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.studies img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos de pantalla completa */
+.fullscreen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fullscreen img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}

@@ -28,13 +28,27 @@ function smoothScroll(target, duration) {
 var menuLinks = document.querySelectorAll('header nav a');
 menuLinks.forEach(function(link) {
   link.addEventListener('click', function(e) {
-    e.preventDefault();
     var target = this.getAttribute('href');
-    smoothScroll(target, 1000);
+
+    // Si el enlace es un ancla (navegación dentro de la misma página, comienza con #)
+    if (target.startsWith('#')) {
+      e.preventDefault();
+      smoothScroll(target, 1000);
+    }
+    // De lo contrario, si es un enlace a otra página, permitimos la navegación normal
   });
 });
+// Seleccionamos el botón de menú y la lista de navegación
+const menuToggle = document.getElementById('mobile-menu');
+const navList = document.getElementById('nav-list');
 
-// Función para animar la entrada de las secciones
+// Evento para mostrar/ocultar el menú en móvil
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+
+
+// animar la entrada de las secciones
 function animateSections() {
   var sections = document.querySelectorAll('section');
   sections.forEach(function(section) {
@@ -47,7 +61,7 @@ function animateSections() {
   });
 }
 
-// Función debounce para mejorar el rendimiento del scroll
+// mejorar el rendimiento del scroll
 function debounce(func, wait = 10, immediate = true) {
   let timeout;
   return function() {
@@ -77,9 +91,13 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// Función para activar/desactivar el modo oscuro
+// activar/desactivar el modo oscuro
 function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
+}
+
+// Agregamos el evento click al botón de modo oscuro
+document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
   
   // Guardar la preferencia del usuario en localStorage
   if (document.body.classList.contains('dark-mode')) {
@@ -87,7 +105,7 @@ function toggleDarkMode() {
   } else {
     localStorage.setItem('theme', 'light');
   }
-}
+
 
 // Obtener el botón de modo oscuro
 const darkModeToggle = document.getElementById('darkModeToggle');
@@ -102,4 +120,23 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     document.body.classList.remove('dark-mode');
   }
+});
+// Mostrar/ocultar el botón "Volver arriba"
+const backToTopButton = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.style.display = 'flex';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
+
+// Funcionalidad para volver arriba suavemente
+backToTopButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
